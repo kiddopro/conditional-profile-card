@@ -38,7 +38,7 @@ function render(variables = {}) {
           <h3>${variables.city},${variables.country}</h3>
           <ul class="${variables.socialMediaPosition}">
             <li><a href="https://twitter.com/${variables.twitter}"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/${variables.github}}"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://github.com/${variables.github}"><i class="fa fa-github"></i></a></li>
             <li><a href="https://linkedin.com/${variables.linkedin}"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/${variables.instagram}"><i class="fa fa-instagram"></i></a></li>
           </ul>
@@ -73,7 +73,7 @@ window.onload = function() {
   render(window.variables); //render the card for the first time
 
   document.querySelectorAll(".picker").forEach(function(elm) {
-    elm.addEventListener("change", function(e) {
+    elm.addEventListener("input", function(e) {
       // <- add a listener to every input
       const attribute = e.target.getAttribute("for"); // when any input changes, collect the value
       let values = {};
